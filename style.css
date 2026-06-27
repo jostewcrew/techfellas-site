@@ -1,0 +1,219 @@
+/* --- GLOBAL RESET & VARIABLES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary-blue: #0056b3;
+  --dark-blue: #003366;
+  --accent-green: #00cc66;
+  --accent-green-hover: #00994d;
+  --bg-dark: #1a1a1a;
+  --bg-card: #2a2a2a;
+  --text-white: #ffffff;
+  --text-gray: #cccccc;
+  --border-color: #444;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-white);
+  background-color: var(--bg-dark);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- HERO SECTION --- */
+.hero {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+.logo-placeholder {
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  width: 200px;
+  height: 100px; /* Placeholder height */
+  line-height: 80px;
+  color: #333;
+  font-weight: bold;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-green);
+  color: var(--text-white);
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+  background-color: var(--accent-green-hover);
+  transform: translateY(-2px);
+}
+
+.sub-cta { font-size: 0.9rem; margin-top: 15px; color: var(--text-gray); }
+
+/* --- FILTER SECTION --- */
+.filter {
+  background-color: var(--bg-card);
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter h2 { font-size: 2rem; margin-bottom: 15px; color: var(--accent-green); }
+.filter p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+
+/* --- SERVICES GRID (Clickable Cards) --- */
+.services { padding: 60px 0; }
+.services h2 { text-align: center; font-size: 2rem; margin-bottom: 10px; }
+.services-intro { text-align: center; margin-bottom: 30px; color: var(--text-gray); }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.service-card {
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-green);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card h3 { color: var(--accent-green); margin-bottom: 15px; font-size: 1.5rem; }
+.service-card p { font-size: 1rem; margin-bottom: 15px; color: var(--text-gray); }
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent-green);
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.service-card:hover .read-more { border-bottom-color: var(--accent-green); }
+
+/* --- DETAIL PAGES (Specific Content) --- */
+.detail-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.detail-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.detail-header p { font-size: 1.1rem; color: var(--text-gray); }
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+.content-block { padding: 40px 0; }
+.content-block h2 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary-blue); }
+.content-block ul { list-style: none; margin-bottom: 30px; }
+.content-block li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.content-block li::before {
+  content: "•";
+  color: var(--accent-green);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.price-box {
+  background-color: var(--bg-card);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-green);
+  text-align: center;
+  margin: 30px 0;
+}
+
+.price-box h3 { color: var(--accent-green); margin-bottom: 10px; }
+.price-box p { font-size: 1.1rem; }
+
+/* --- PROCESS SECTION --- */
+.process {
+  background-color: var(--primary-blue);
+  padding: 70px 0;
+  text-align: center;
+}
+
+.process h2 { margin-bottom: 40px; font-size: 2.2rem; }
+.process ol {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 2;
+  text-align: left;
+}
+.process li { margin-bottom: 15px; font-weight: 500; }
+
+/* --- FOOTER --- */
+footer {
+  background-color: #111;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+footer a { color: var(--accent-green); font-weight: bold; }
+footer a:hover { text-decoration: underline; }
+.copyright { margin-top: 20px; font-size: 0.8rem; color: #666; }
+
+/* --- MAP SECTION --- */
+.map-section { padding: 60px 0; text-align: center; }
+.map-section h2 { margin-bottom: 20px; }
+.map-container { margin-top: 30px; }
+
+/* --- MOBILE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  .cta-button { font-size: 1rem; padding: 12px 25px; }
+  .service-grid { grid-template-columns: 1fr; }
+}

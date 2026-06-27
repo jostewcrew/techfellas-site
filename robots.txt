@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Allow all major search engines to crawl the entire site
+User-agent: Googlebot
+Allow: /
+
+# Block common crawler traps (optional, but good practice)
+Disallow: /cgi-bin/
+Disallow: /private/
+
+# Sitemap location (critical for indexing speed)
+Sitemap: https://techfellas.org/sitemap.xml
