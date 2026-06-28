@@ -15,9 +15,9 @@
   <meta property="og:description" content="From virus removal to motherboard resurrection. We fix Windows & Mac. Serving 32940/32955.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://techfellasllc.com/laptops.html">
-  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:image" content="assets/techfellas-banner.jpg">
 
-  <!-- JSON-LD Schema (Specific to Service) -->
+  <!-- JSON-LD Schema: Service -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,12 +44,35 @@
 </head>
 <body>
 
-  <!-- BACK LINK -->
-  <div class="container" style="padding: 20px 20px 0;">
-    <a href="index.html" class="back-link">&larr; Back to Home</a>
-  </div>
+  <!-- GLOBAL HEADER -->
+  <header class="global-header">
+    <div class="container header-container">
+      <div class="logo-area">
+        <a href="index.html">
+          <img src="assets/techfellas-banner.jpg" alt="Tech Fellas LLC Logo" class="site-logo">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="laptops.html">Services ▾</a>
+            <div class="dropdown-content">
+              <a href="laptops.html">Laptops & Desktops</a>
+              <a href="phones.html">Phones & Tablets</a>
+              <a href="consoles.html">Consoles</a>
+              <a href="tvs.html">TV Repair</a>
+              <a href="networking.html">Networking</a>
+            </div>
+          </li>
+          <li><a href="http://techfellasllc.square.site" class="nav-cta">Book Now ($60)</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle" onclick="document.querySelector('.main-nav').classList.toggle('active')">☰</div>
+    </div>
+  </header>
 
-  <!-- HERO -->
+  <!-- PAGE HERO (Detail Page Style) -->
   <header class="detail-header">
     <div class="container">
       <h1>Laptop & Desktop Repair</h1>
@@ -57,7 +80,7 @@
     </div>
   </header>
 
-  <!-- CONTENT -->
+  <!-- CONTENT BLOCK -->
   <section class="content-block">
     <div class="container">
       <h2>What We Fix</h2>
@@ -71,19 +94,21 @@
         <li><strong>Board-Level Repair:</strong> <strong>Motherboard resurrection</strong> for water damage, power shorts, and burnt components.</li>
       </ul>
 
+      <!-- PRICE BOX -->
       <div class="price-box">
         <h3>The Deal</h3>
         <p><strong>$60 Diagnostic Fee.</strong> If you proceed with the repair, this fee is <strong>100% applied to the total cost</strong>.</p>
         <p>If it's not fixable or not economical, we tell you straight up. No games.</p>
       </div>
 
+      <!-- CTA BUTTON -->
       <div style="text-align: center; margin-top: 30px;">
         <a href="http://techfellasllc.square.site" class="cta-button">Book Diagnostics Now</a>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS (Reused for consistency) -->
+  <!-- PROCESS SECTION -->
   <section class="process">
     <div class="container">
       <h2>Our Process</h2>
@@ -96,12 +121,33 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>Call us: <a href="tel:4238401887">423-840-1887</a></p>
-      <p>Emergency? Call the business line.</p>
-      <p class="copyright">&copy; 2026 TechFellas LLC. All rights reserved.</p>
+  <!-- GLOBAL FOOTER -->
+  <footer class="global-footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h3>Tech Fellas LLC</h3>
+        <p>Board-level repair. One-time fixes. No subs.</p>
+        <p><strong>Serving:</strong> Melbourne (32940) & Palm Bay (32955)</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p><a href="tel:4238401887">423-840-1887</a></p>
+        <p><a href="http://techfellasllc.square.site">Book Diagnostics</a></p>
+        <p><a href="https://www.google.com/maps/search/Tech Fellas+LLC" target="_blank">Find us on Maps</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="laptops.html">Laptops</a></li>
+          <li><a href="phones.html">Phones</a></li>
+          <li><a href="consoles.html">Consoles</a></li>
+          <li><a href="tvs.html">TVs</a></li>
+          <li><a href="networking.html">Networking</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-bar">
+      <p>&copy; 2026 Tech Fellas LLC. All rights reserved.</p>
     </div>
   </footer>
 

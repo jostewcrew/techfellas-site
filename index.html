@@ -11,7 +11,7 @@
   <meta name="author" content="Tech Fellas">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-  <!-- Canonical URL: Critical for preventing duplicate content penalties -->
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://techfellas.org" />
 
   <!-- Open Graph -->
@@ -21,7 +21,7 @@
   <meta property="og:url" content="https://techfellas.org">
   <meta property="og:image" content="assets/techfellas-banner.jpg">
 
-  <!-- JSON-LD Schema: Local Business (Updated) -->
+  <!-- JSON-LD Schema: Local Business -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,8 +32,7 @@
     "url": "https://techfellas.org",
     "priceRange": "$$",
     "description": "Board-level electronics repair, virus removal, and diagnostics for Laptops, Phones, Consoles, TVs, and Networking. Serving Melbourne (32940) & Palm Bay (32955).",
-
-        "areaServed": [
+    "areaServed": [
       { "@type": "City", "name": "Viera", "addressRegion": "FL" },
       { "@type": "PostalCode", "postalCode": "32940" },
       { "@type": "PostalCode", "postalCode": "32955" },
@@ -70,10 +69,37 @@
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- GLOBAL HEADER -->
+  <header class="global-header">
+    <div class="container header-container">
+      <div class="logo-area">
+        <a href="index.html">
+          <img src="assets/techfellas-banner.jpg" alt="Tech Fellas LLC Logo" class="site-logo">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="laptops.html">Services ▾</a>
+            <div class="dropdown-content">
+              <a href="laptops.html">Laptops & Desktops</a>
+              <a href="phones.html">Phones & Tablets</a>
+              <a href="consoles.html">Consoles</a>
+              <a href="tvs.html">TV Repair</a>
+              <a href="networking.html">Networking</a>
+            </div>
+          </li>
+          <li><a href="http://techfellasllc.square.site" class="nav-cta">Book Now ($60)</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle" onclick="document.querySelector('.main-nav').classList.toggle('active')">☰</div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
   <header class="hero">
     <div class="container">
-      <img src="assets/techfellas-banner.jpg" alt="Tech Fellas Logo" style="max-width: 150px; height: auto;">
       <h1>We Speak Circuit Board.</h1>
       <p>Board-level repair. One-time fixes. No subs. No warranties. Just honest diagnostics.</p>
       <a href="http://techfellasllc.square.site" class="cta-button">Book Diagnostics ($60)</a>
@@ -81,15 +107,15 @@
     </div>
   </header>
 
-  <!-- FILTER -->
+  <!-- FILTER / VALUE PROP SECTION -->
   <section class="filter">
     <div class="container">
-      <h2>We Don’t Sell Warranties.</h2>
-      <p>We don’t do monthly fees. If it’s dead, we try to wake it up. If it’s not economical, we tell you. No games.</p>
+      <h2>We Don't Sell Warranties.</h2>
+      <p>We don't do monthly fees. If it's dead, we try to wake it up. If it's not economical, we tell you. No games.</p>
     </div>
   </section>
 
-  <!-- SERVICES GRID -->
+  <!-- SERVICES GRID SECTION -->
   <section class="services">
     <div class="container">
       <h2>What We Fix</h2>
@@ -116,7 +142,6 @@
             <span class="read-more">View Details &rarr;</span>
           </div>
         </a>
-        <!-- Updated: Separate TV and Networking -->
         <a href="tvs.html" class="service-card-link">
           <div class="service-card">
             <h3>TV Repair</h3>
@@ -135,7 +160,7 @@
     </div>
   </section>
 
-  <!-- PROCESS -->
+  <!-- PROCESS SECTION -->
   <section class="process">
     <div class="container">
       <h2>How It Works</h2>
@@ -148,12 +173,33 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>Call us: <a href="tel:4238401887">423-840-1887</a></p>
-      <p><a href="https://www.google.com/maps/search/Tech Fellas+LLC" target="_blank" rel="noopener">Find us on Google Maps &rarr;</a></p>
-      <p class="copyright">&copy; 2026 Tech Fellas LLC. All rights reserved.</p>
+  <!-- GLOBAL FOOTER -->
+  <footer class="global-footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h3>Tech Fellas LLC</h3>
+        <p>Board-level repair. One-time fixes. No subs.</p>
+        <p><strong>Serving:</strong> Melbourne (32940) & Palm Bay (32955)</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p><a href="tel:4238401887">423-840-1887</a></p>
+        <p><a href="http://techfellasllc.square.site">Book Diagnostics</a></p>
+        <p><a href="https://www.google.com/maps/search/Tech Fellas+LLC" target="_blank">Find us on Maps</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="laptops.html">Laptops</a></li>
+          <li><a href="phones.html">Phones</a></li>
+          <li><a href="consoles.html">Consoles</a></li>
+          <li><a href="tvs.html">TVs</a></li>
+          <li><a href="networking.html">Networking</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-bar">
+      <p>&copy; 2026 Tech Fellas LLC. All rights reserved.</p>
     </div>
   </footer>
 
