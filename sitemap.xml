@@ -4,7 +4,7 @@
   <!-- Homepage: Highest Priority -->
   <url>
     <loc>https://techfellas.org/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +13,7 @@
   <!-- TV Repair -->
   <url>
     <loc>https://techfellas.org/tvs.html</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -21,7 +21,7 @@
   <!-- Laptop & Desktop Repair -->
   <url>
     <loc>https://techfellas.org/laptops.html</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,7 +29,7 @@
   <!-- Phone & Tablet Repair -->
   <url>
     <loc>https://techfellas.org/phones.html</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -37,7 +37,7 @@
   <!-- Console Repair -->
   <url>
     <loc>https://techfellas.org/consoles.html</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -45,7 +45,7 @@
   <!-- Networking Solutions -->
   <url>
     <loc>https://techfellas.org/networking.html</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
