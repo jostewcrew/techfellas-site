@@ -26,7 +26,7 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ElectronicsRepair",
   "name": "Tech Fellas",
   "legalName": "Tech Fellas LLC",
   "image": "https://techfellas.org/assets/techfellas-banner.jpg",
@@ -160,6 +160,23 @@
 </script>
 
   <link rel="stylesheet" href="style.css">
+  
+    <!-- Breadcrumb Schema: Homepage (Invisible to users, visible to Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://techfellas.org"
+      }
+    ]
+  }
+  </script>
+</head>
 </head>
 <body>
 
@@ -168,7 +185,7 @@
     <div class="container header-container">
       <div class="logo-area">
         <a href="index.html">
-          <img src="assets/techfellas-banner.jpg" alt="Tech Fellas LLC Logo" class="site-logo">
+          <img src="assets/techfellas-banner.jpg" alt="Tech Fellas - Mobile Electronics Repair Tri-Cities TN" class="site-logo">
         </a>
       </div>
       <nav class="main-nav">

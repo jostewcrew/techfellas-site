@@ -21,97 +21,120 @@
   <meta property="og:image" content="https://techfellas.org/assets/techfellas-banner.jpg">
   <meta property="og:locale" content="en_US">
 
-  <!-- JSON-LD Schema: Service (Specific to TV Repair & Area) -->
+  <!-- JSON-LD Schema: ElectronicsRepair (Specific Type) + AreaServed -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Tech Fellas",
-  "legalName": "Tech Fellas LLC",
-  "image": "https://techfellas.org/assets/techfellas-banner.jpg",
-  "telephone": "+1-423-840-1887",
-  "url": "https://techfellas.org/tvs.html",
-  "description": "Expert board-level TV repair for backlights, power boards, and HDMI ports in the Tri-Cities, TN area.",
-  "areaServed": [
-    { "@type": "City", "name": "Johnson City", "addressRegion": "TN" },
-    { "@type": "City", "name": "Bristol", "addressRegion": "TN" },
-    { "@type": "City", "name": "Kingsport", "addressRegion": "TN" },
-    { "@type": "City", "name": "Elizabethton", "addressRegion": "TN" },
-    { "@type": "City", "name": "Blountville", "addressRegion": "TN" },
-    { "@type": "City", "name": "Piney Flats", "addressRegion": "TN" },
-    { "@type": "City", "name": "Bluff City", "addressRegion": "TN" },
-    { "@type": "PostalCode", "postalCode": "37601" },
-    { "@type": "PostalCode", "postalCode": "37604" },
-    { "@type": "PostalCode", "postalCode": "37615" },
-    { "@type": "PostalCode", "postalCode": "37620" },
-    { "@type": "PostalCode", "postalCode": "37660" },
-    { "@type": "PostalCode", "postalCode": "37663" },
-    { "@type": "PostalCode", "postalCode": "37664" },
-    { "@type": "PostalCode", "postalCode": "37665" },
-    { "@type": "PostalCode", "postalCode": "37643" },
-    { "@type": "PostalCode", "postalCode": "37617" },
-    { "@type": "PostalCode", "postalCode": "37686" },
-    { "@type": "PostalCode", "postalCode": "37618" }
-  ],
-  "sameAs": [
-    "https://www.x.com/techfellasllc",
-    "https://www.youtube.com/@tech_fellas",
-    "https://www.facebook.com/techfellasllc",
-    "https://www.instagram.com/technical_fellow",
-    "https://www.linkedin.com/in/technicalfellow"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "TV Repair Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Diagnostic Fee",
-          "description": "$60 diagnostic fee applied to repair cost.",
-          "offers": {
-            "@type": "Offer",
-            "price": "60",
-            "priceCurrency": "USD",
-            "name": "Diagnostic Fee"
+  {
+    "@context": "https://schema.org",
+    "@type": "ElectronicsRepair",
+    "name": "Tech Fellas",
+    "legalName": "Tech Fellas LLC",
+    "image": "https://techfellas.org/assets/techfellas-banner.jpg",
+    "telephone": "+1-423-840-1887",
+    "url": "https://techfellas.org/tvs.html",
+    "description": "Expert board-level TV repair for backlights, power boards, and HDMI ports in the Tri-Cities, TN area.",
+    "areaServed": [
+      { "@type": "City", "name": "Johnson City", "addressRegion": "TN" },
+      { "@type": "City", "name": "Bristol", "addressRegion": "TN" },
+      { "@type": "City", "name": "Kingsport", "addressRegion": "TN" },
+      { "@type": "City", "name": "Elizabethton", "addressRegion": "TN" },
+      { "@type": "City", "name": "Blountville", "addressRegion": "TN" },
+      { "@type": "City", "name": "Piney Flats", "addressRegion": "TN" },
+      { "@type": "City", "name": "Bluff City", "addressRegion": "TN" },
+      { "@type": "PostalCode", "postalCode": "37601" },
+      { "@type": "PostalCode", "postalCode": "37604" },
+      { "@type": "PostalCode", "postalCode": "37615" },
+      { "@type": "PostalCode", "postalCode": "37620" },
+      { "@type": "PostalCode", "postalCode": "37660" },
+      { "@type": "PostalCode", "postalCode": "37663" },
+      { "@type": "PostalCode", "postalCode": "37664" },
+      { "@type": "PostalCode", "postalCode": "37665" },
+      { "@type": "PostalCode", "postalCode": "37643" },
+      { "@type": "PostalCode", "postalCode": "37617" },
+      { "@type": "PostalCode", "postalCode": "37686" },
+      { "@type": "PostalCode", "postalCode": "37618" }
+    ],
+    "sameAs": [
+      "https://www.x.com/techfellasllc",
+      "https://www.youtube.com/@tech_fellas",
+      "https://www.facebook.com/techfellasllc",
+      "https://www.instagram.com/technical_fellow",
+      "https://www.linkedin.com/in/technicalfellow"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "TV Repair Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Diagnostic Fee",
+            "description": "$60 diagnostic fee applied to repair cost.",
+            "offers": {
+              "@type": "Offer",
+              "price": "60",
+              "priceCurrency": "USD",
+              "name": "Diagnostic Fee"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "TV Backlight Replacement"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "TV Power Board Repair"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "TV HDMI Port Repair"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "TV Logic Board Diagnostics"
           }
         }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+
+    <!-- Breadcrumb Schema: TV Repair Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://techfellas.org"
       },
       {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "TV Backlight Replacement"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "TV Power Board Repair"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "TV HDMI Port Repair"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "TV Logic Board Diagnostics"
-        }
+        "@type": "ListItem",
+        "position": 2,
+        "name": "TV Repair",
+        "item": "https://techfellas.org/tvs.html"
       }
     ]
   }
-}
-</script>
-
-  <link rel="stylesheet" href="style.css">
+  </script>
+</head>
 </head>
 <body>
 
@@ -120,7 +143,8 @@
     <div class="container header-container">
       <div class="logo-area">
         <a href="index.html">
-          <img src="assets/techfellas-banner.jpg" alt="Tech Fellas LLC Logo" class="site-logo">
+          <!-- FIX: Updated Alt Text for SEO -->
+          <img src="assets/techfellas-banner.jpg" alt="Tech Fellas - Mobile Electronics Repair Tri-Cities TN" class="site-logo">
         </a>
       </div>
       <nav class="main-nav">
@@ -155,7 +179,8 @@
   <section class="content-block">
     <div class="container">
       <h2>Common TV Issues We Fix</h2>
-      <p>We diagnose the root cause of power failures, backlight issues, and signal loss for all major brands in Viera West, Viera East, and Rockledge.</p>
+      <!-- FIX: Replaced "Viera, FL" with "Tri-Cities, TN" -->
+      <p>We diagnose the root cause of power failures, backlight issues, and signal loss for all major brands across the **Tri-Cities, TN** area (Johnson City, Bristol, Kingsport, and surrounding communities).</p>
       
       <ul>
         <li><strong>Screens go black but sound works:</strong> Usually a backlight failure or power board issue.</li>

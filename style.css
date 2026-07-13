@@ -2,15 +2,24 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --primary-blue: #0056b3;
-  --dark-blue: #003366;
-  --accent-green: #00cc66;
-  --accent-green-hover: #00994d;
-  --bg-dark: #1a1a1a;
-  --bg-card: #2a2a2a;
-  --text-white: #ffffff;
-  --text-gray: #cccccc;
-  --border-color: #444;
+  /* Color Palette: High Contrast & Accessible */
+  --primary-blue: #0056b3; /* Dark enough for white text */
+  --dark-blue: #003366;    /* Header background */
+  --accent-green: #00cc66; /* Call to Action Buttons (Bright) */
+  --accent-green-hover: #00994d; /* Hover state */
+  
+  /* Backgrounds */
+  --bg-dark: #1a1a1a;      /* Main Body Background */
+  --bg-card: #2a2a2a;      /* Section/Box Backgrounds */
+  --bg-footer: #111111;    /* Footer Background */
+  
+  /* Text Colors: All meet 4.5:1 contrast ratio against dark backgrounds */
+  --text-white: #ffffff;   /* Primary text */
+  --text-gray: #e0e0e0;    /* Secondary text (Increased from #cccccc for contrast) */
+  --text-muted: #aaaaaa;   /* Tertiary/Muted text */
+  
+  /* Borders & Dividers */
+  --border-color: #444444;
 }
 
 body {
@@ -25,8 +34,6 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-
-a { text-decoration: none; color: inherit; transition: color 0.3s; }
 
 /* --- GLOBAL HEADER (NEW) --- */
 .global-header {
@@ -45,8 +52,9 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
 }
 
 .logo-area img {
-  height: 50px; /* Adjust based on your banner aspect ratio */
+  height: 50px;
   width: auto;
+  display: block;
 }
 
 .main-nav ul {
@@ -60,6 +68,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   color: var(--text-white);
   font-weight: 600;
   font-size: 1rem;
+  text-decoration: none;
 }
 
 .main-nav a:hover {
@@ -112,6 +121,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   border-radius: 4px;
   color: var(--text-white) !important;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .nav-cta:hover {
@@ -124,11 +134,12 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   font-size: 1.8rem;
   cursor: pointer;
   color: var(--accent-green);
+  text-decoration: none;
 }
 
 /* --- GLOBAL FOOTER (NEW) --- */
 .global-footer {
-  background-color: #111;
+  background-color: var(--bg-footer);
   border-top: 1px solid var(--border-color);
   padding: 40px 0 0;
 }
@@ -147,16 +158,20 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
 }
 
 .footer-col p {
-  color: var(--text-gray);
+  color: var(--text-gray); /* High contrast gray */
   margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
 .footer-col a {
-  color: var(--text-gray);
+  color: var(--text-white); /* High contrast white for links */
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-col a:hover {
   color: var(--accent-green);
+  text-decoration: underline;
 }
 
 .footer-links {
@@ -171,7 +186,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   text-align: center;
   border-top: 1px solid #333;
   padding: 20px 0;
-  color: #666;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -182,7 +197,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   }
 
   .main-nav {
-    display: none; /* Hidden by default on mobile */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -217,17 +232,16 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
 
   .dropdown-content {
     position: static;
-    display: none; /* Hidden until parent clicked? Or keep hover? Let's keep hover for simplicity or toggle via JS if needed. For now, hover works on desktop, mobile needs tap. */
+    display: none;
     box-shadow: none;
     background-color: #002244;
     border: none;
+    margin-top: 10px;
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-  /* Optional: Make dropdown clickable on mobile if needed, but hover is usually fine for simple menus */
 }
 
 /* --- HERO SECTION (Home Page) --- */
@@ -237,13 +251,17 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   text-align: center;
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.hero h1 { 
+  font-size: 3rem; 
+  margin-bottom: 20px; 
+  font-weight: 700; 
+  line-height: 1.2;
+}
 
-.site-logo {
-  height: 60px; /* Adjust for banner aspect ratio */
-  width: auto;
-  display: block;
+.hero p { 
+  font-size: 1.2rem; 
+  margin-bottom: 30px; 
+  color: var(--text-white);
 }
 
 /* --- CTA BUTTONS (Global) --- */
@@ -258,6 +276,8 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   transition: background-color 0.3s, transform 0.2s;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .cta-button:hover {
@@ -265,7 +285,11 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   transform: translateY(-2px);
 }
 
-.sub-cta { font-size: 0.9rem; margin-top: 15px; color: var(--text-gray); }
+.sub-cta { 
+  font-size: 0.9rem; 
+  margin-top: 15px; 
+  color: var(--text-gray); 
+}
 
 /* --- FILTER SECTION --- */
 .filter {
@@ -275,13 +299,35 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   border-bottom: 1px solid var(--border-color);
 }
 
-.filter h2 { font-size: 2rem; margin-bottom: 15px; color: var(--accent-green); }
-.filter p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+.filter h2 { 
+  font-size: 2rem; 
+  margin-bottom: 15px; 
+  color: var(--accent-green); 
+}
+
+.filter p { 
+  max-width: 800px; 
+  margin: 0 auto; 
+  font-size: 1.1rem; 
+  color: var(--text-gray);
+}
 
 /* --- SERVICES GRID (Home Page) --- */
-.services { padding: 60px 0; }
-.services h2 { text-align: center; font-size: 2rem; margin-bottom: 10px; }
-.services-intro { text-align: center; margin-bottom: 30px; color: var(--text-gray); }
+.services { 
+  padding: 60px 0; 
+}
+
+.services h2 { 
+  text-align: center; 
+  font-size: 2rem; 
+  margin-bottom: 10px; 
+}
+
+.services-intro { 
+  text-align: center; 
+  margin-bottom: 30px; 
+  color: var(--text-muted);
+}
 
 .service-grid {
   display: grid;
@@ -311,8 +357,17 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.service-card h3 { color: var(--accent-green); margin-bottom: 15px; font-size: 1.5rem; }
-.service-card p { font-size: 1rem; margin-bottom: 15px; color: var(--text-gray); }
+.service-card h3 { 
+  color: var(--accent-green); 
+  margin-bottom: 15px; 
+  font-size: 1.5rem; 
+}
+
+.service-card p { 
+  font-size: 1rem; 
+  margin-bottom: 15px; 
+  color: var(--text-gray);
+}
 
 .read-more {
   display: inline-block;
@@ -324,7 +379,9 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   transition: border-color 0.3s;
 }
 
-.service-card:hover .read-more { border-bottom-color: var(--accent-green); }
+.service-card:hover .read-more { 
+  border-bottom-color: var(--accent-green); 
+}
 
 /* --- DETAIL PAGES (Specific Content) --- */
 .detail-header {
@@ -333,23 +390,38 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   text-align: center;
 }
 
-.detail-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-.detail-header p { font-size: 1.1rem; color: var(--text-gray); }
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: var(--accent-green);
-  font-weight: bold;
+.detail-header h1 { 
+  font-size: 2.5rem; 
+  margin-bottom: 10px; 
+  line-height: 1.2;
 }
 
-.content-block { padding: 40px 0; }
-.content-block h2 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary-blue); }
-.content-block ul { list-style: none; margin-bottom: 30px; }
+.detail-header p { 
+  font-size: 1.1rem; 
+  color: var(--text-white);
+}
+
+.content-block { 
+  padding: 40px 0; 
+}
+
+.content-block h2 { 
+  font-size: 1.8rem; 
+  margin-bottom: 20px; 
+  color: var(--text-white); /* Changed to white for better contrast on dark bg */
+  font-weight: 700;
+}
+
+.content-block ul { 
+  list-style: none; 
+  margin-bottom: 30px; 
+}
+
 .content-block li {
   margin-bottom: 10px;
   padding-left: 20px;
   position: relative;
+  color: var(--text-gray);
 }
 
 .content-block li::before {
@@ -370,8 +442,15 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   margin: 30px 0;
 }
 
-.price-box h3 { color: var(--accent-green); margin-bottom: 10px; }
-.price-box p { font-size: 1.1rem; }
+.price-box h3 { 
+  color: var(--accent-green); 
+  margin-bottom: 10px; 
+}
+
+.price-box p { 
+  font-size: 1.1rem; 
+  color: var(--text-white);
+}
 
 /* --- PROCESS SECTION --- */
 .process {
@@ -380,7 +459,12 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   text-align: center;
 }
 
-.process h2 { margin-bottom: 40px; font-size: 2.2rem; }
+.process h2 { 
+  margin-bottom: 40px; 
+  font-size: 2.2rem; 
+  color: var(--text-white);
+}
+
 .process ol {
   max-width: 700px;
   margin: 0 auto;
@@ -390,7 +474,12 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   list-style: decimal;
   padding-left: 20px;
 }
-.process li { margin-bottom: 15px; font-weight: 500; }
+
+.process li { 
+  margin-bottom: 15px; 
+  font-weight: 500; 
+  color: var(--text-white);
+}
 
 /* --- MOBILE ADJUSTMENTS (Final Polish) --- */
 @media (max-width: 768px) {
@@ -401,18 +490,50 @@ a { text-decoration: none; color: inherit; transition: color 0.3s; }
   .service-grid { grid-template-columns: 1fr; }
   
   .detail-header h1 { font-size: 2rem; }
-  
-  /* Ensure dropdown works on mobile tap if needed, though hover is usually fine */
-  .dropdown-content {
-    position: static;
-    display: block; /* Always show on mobile if parent is clicked? Or keep hidden? */
-    background-color: #002244;
-    border: none;
-    box-shadow: none;
-    margin-top: 10px;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+}
+/* --- BREADCRUMB NAVIGATION --- */
+.breadcrumbs {
+  background-color: var(--bg-card);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  color: var(--text-gray);
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "›";
+  margin-left: 10px;
+  color: var(--accent-green);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.breadcrumbs a {
+  color: var(--text-white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+  color: var(--accent-green);
+  text-decoration: underline;
+}
+
+.breadcrumbs li[aria-current="page"] {
+  color: var(--text-muted);
+  font-weight: 500;
 }
